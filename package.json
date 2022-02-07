@@ -1,0 +1,23 @@
+{
+  "name": "uber",
+  "version": "1.0.0",
+  "description": "My project!",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass scss -w -o css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valek-web/uBER.git"
+  },
+  "author": "valek-web",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/valek-web/uBER/issues"
+  },
+  "homepage": "https://github.com/valek-web/uBER#readme",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
