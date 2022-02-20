@@ -1,6 +1,110 @@
-h1 {
-  color: rgb(247, 0, 255);
-  background-color: #000;
-  text-decoration: double;
-  font-size: 60px;
+@mixin button {
+  font-family: 'Roboto';
+  background-image: linear-gradient(0deg, #1eacc7 0%, #4ce2ff 100%);
+  border: 0px solid rgba(0, 0, 0, 0.06);
+  border-radius: 5px;
+  box-shadow: inset 0px -3px 0px 0px rgba(0, 0, 0, 0.11);
+  color: #ffffff;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
+  font-weight: 400;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 1140px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #212121;
+  width: 100vw;
+  .header_menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 13px 70px;
+  }
+  .menu_element {
+    padding-left: 30px;
+    a {
+      font-family: 'Roboto' sans-serif;
+      font-size: 15px;
+      font-weight: 300;
+      color: #ffffff;
+      text-decoration: none;
+    }
+  }
+  .menu_element:not(.start) {
+    border-left: dashed 2px black;
+  }
+}
+
+.subheader {
+  height: 84px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 16px 0 16px 0;
+  &_wrapper {
+    display: flex;
+    justify-content: space-around;
+    .wrapper_logo {
+      .logo {
+        display: flex;
+        justify-items: center;
+        &_text {
+          font-family: 'Roboto';
+          font-size: 26px;
+          font-weight: 400;
+          text-transform: uppercase;
+          letter-spacing: 0.075em;
+          color: #ffffff;
+        }
+        &_img {
+          width: 32px;
+          height: 32px;
+          margin-right: 9px;
+        }
+      }
+      .subheader_text {
+        font-family: 'Roboto';
+        font-size: 13px;
+        font-weight: 100;
+        color: rgba(255, 255, 255, 0.5);
+        margin-top: 9px;
+      }
+    }
+    .contact {
+      display: flex;
+      address {
+        .address {
+          font-family: 'Roboto';
+          font-size: 22px;
+          font-weight: 400;
+          text-transform: uppercase;
+          color: #ffffff;
+        }
+        .contact_text {
+          font-family: 'Roboto';
+          font-size: 12px;
+          line-height: 14px;
+          font-weight: 300;
+          color: #ffffff;
+        }
+      }
+      .contact_btn {
+        @include button();
+        font-size: 14px;
+        width: 178px;
+        height: 52px;
+        margin-left: 30px;
+      }
+    }
+  }
 }
