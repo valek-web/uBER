@@ -15,6 +15,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Roboto';
 }
 
 .container {
@@ -48,6 +49,9 @@ header {
 }
 
 .subheader {
+  position: absolute;
+  top: 0;
+  width: 100%;
   height: 84px;
   background-color: rgba(0, 0, 0, 0.6);
   padding: 16px 0 16px 0;
@@ -106,5 +110,44 @@ header {
         margin-left: 30px;
       }
     }
+  }
+}
+
+.promo {
+  position: relative;
+  background: url('../img/bg_banner.jpg') center center / cover no-repeat;
+  height: 748px;
+  padding: 151px 0 132px 0;
+  text-align: center;
+  &_header {
+    font-size: 60px;
+    font-weight: 900;
+    margin: 0;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+  &_subheader {
+    margin-top: 22px;
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+  &_descr {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #ffffff;
+    margin-top: 23px;
+    &_text {
+      margin-top: 37px;
+    }
+  }
+  &_btn {
+    @include button();
+    width: 265px;
+    height: 69px;
+    font-size: 18px;
+    margin-top: 115px;
   }
 }
