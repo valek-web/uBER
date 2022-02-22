@@ -44,7 +44,15 @@ header .menu_element:not(.start) {
   border-left: dashed 2px black;
 }
 
-.subheader {
+.promo {
+  position: relative;
+  background: url("../img/bg_banner.jpg") center center/cover no-repeat;
+  height: 748px;
+  padding: 151px 0 132px 0;
+  text-align: center;
+}
+
+.promo .subheader {
   position: absolute;
   top: 0;
   width: 100%;
@@ -53,7 +61,7 @@ header .menu_element:not(.start) {
   padding: 16px 0 16px 0;
 }
 
-.subheader_wrapper {
+.promo .subheader_wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -61,14 +69,14 @@ header .menu_element:not(.start) {
       justify-content: space-around;
 }
 
-.subheader_wrapper .wrapper_logo .logo {
+.promo .subheader_wrapper .wrapper_logo .logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   justify-items: center;
 }
 
-.subheader_wrapper .wrapper_logo .logo_text {
+.promo .subheader_wrapper .wrapper_logo .logo_text {
   font-family: 'Roboto';
   font-size: 26px;
   font-weight: 400;
@@ -77,13 +85,13 @@ header .menu_element:not(.start) {
   color: #ffffff;
 }
 
-.subheader_wrapper .wrapper_logo .logo_img {
+.promo .subheader_wrapper .wrapper_logo .logo_img {
   width: 32px;
   height: 32px;
   margin-right: 9px;
 }
 
-.subheader_wrapper .wrapper_logo .subheader_text {
+.promo .subheader_wrapper .wrapper_logo .subheader_text {
   font-family: 'Roboto';
   font-size: 13px;
   font-weight: 100;
@@ -91,13 +99,14 @@ header .menu_element:not(.start) {
   margin-top: 9px;
 }
 
-.subheader_wrapper .contact {
+.promo .subheader_wrapper .contact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  justify-items: center;
 }
 
-.subheader_wrapper .contact address .address {
+.promo .subheader_wrapper .contact address .address {
   font-family: 'Roboto';
   font-size: 22px;
   font-weight: 400;
@@ -105,7 +114,7 @@ header .menu_element:not(.start) {
   color: #ffffff;
 }
 
-.subheader_wrapper .contact address .contact_text {
+.promo .subheader_wrapper .contact address .contact_text {
   font-family: 'Roboto';
   font-size: 12px;
   line-height: 14px;
@@ -113,7 +122,7 @@ header .menu_element:not(.start) {
   color: #ffffff;
 }
 
-.subheader_wrapper .contact .contact_btn {
+.promo .subheader_wrapper .contact .contact_btn {
   font-family: 'Roboto';
   background-image: -webkit-gradient(linear, left bottom, left top, from(#1eacc7), to(#4ce2ff));
   background-image: linear-gradient(0deg, #1eacc7 0%, #4ce2ff 100%);
@@ -130,14 +139,6 @@ header .menu_element:not(.start) {
   width: 178px;
   height: 52px;
   margin-left: 30px;
-}
-
-.promo {
-  position: relative;
-  background: url("../img/bg_banner.jpg") center center/cover no-repeat;
-  height: 748px;
-  padding: 151px 0 132px 0;
-  text-align: center;
 }
 
 .promo_header {
@@ -185,5 +186,91 @@ header .menu_element:not(.start) {
   height: 69px;
   font-size: 18px;
   margin-top: 115px;
+}
+
+.reasons {
+  padding: 79px 0 68px 0;
+}
+
+.reasons .container .label {
+  font-size: 11px;
+  font-weight: 100;
+  text-transform: uppercase;
+  width: 112px;
+  height: 24px;
+  padding: 5px 12px;
+  text-align: center;
+  margin: 0 auto;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.reasons .container .title {
+  font-size: 38px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  color: #222222;
+  margin-top: 44px;
+}
+
+.reasons .container .reasons_wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  gap: 35px 102px;
+  margin-top: 40px;
+}
+
+.reasons .container .reasons_block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.reasons .container .wrapper_img {
+  width: 113px;
+  height: 113px;
+  background-color: #1eacc7;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.reasons .container .reasons_img {
+  max-width: 85px;
+  max-height: 78px;
+}
+
+.reasons .container .wrapper_reasons_text {
+  max-width: 341px;
+  line-height: 21px;
+}
+
+.reasons .container .reasons_header {
+  font-size: 17px;
+  font-weight: 400;
+  color: #1eacc7;
+}
+
+.reasons .container .reasons_text {
+  text-align: justify;
+  line-height: 21px;
+  font-size: 15px;
+  font-weight: 300;
+  color: #202020;
 }
 /*# sourceMappingURL=style.min.css.map */
