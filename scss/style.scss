@@ -11,22 +11,11 @@
   cursor: pointer;
 }
 
-@mixin label {
-  font-size: 11px;
-  font-weight: 100;
-  text-transform: uppercase;
-  width: 112px;
-  height: 24px;
-  padding: 5px 12px;
-  text-align: center;
-  margin: 0 auto;
-}
-
-@mixin title {
-  font-size: 38px;
-  font-weight: 700;
-  text-transform: uppercase;
-  text-align: center;
+@mixin hover_btn {
+  &:hover {
+    background-color: #1eacc7;
+    background-image: none;
+  }
 }
 
 * {
@@ -129,6 +118,7 @@ header {
         }
         .contact_btn {
           @include button();
+          @include hover_btn();
           font-size: 14px;
           width: 178px;
           height: 52px;
@@ -163,6 +153,7 @@ header {
   }
   &_btn {
     @include button();
+    @include hover_btn();
     width: 265px;
     height: 69px;
     font-size: 18px;
@@ -170,22 +161,33 @@ header {
   }
 }
 
+.label {
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 100;
+  text-transform: uppercase;
+  width: 112px;
+  height: 24px;
+  padding: 5px 12px;
+  text-align: center;
+  margin: 0 auto;
+}
+.title {
+  color: #222222;
+  margin-top: 44px;
+  font-size: 38px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
 .reasons {
   padding: 79px 0 68px 0;
   .container {
-    .label {
-      @include label();
-      background-color: #000000;
-      color: #ffffff;
-    }
-    .title {
-      @include title();
-      color: #222222;
-      margin-top: 44px;
-    }
     .reasons_wrapper {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 1fr 1fr;
       gap: 35px 102px;
       margin-top: 40px;
     }
@@ -225,6 +227,81 @@ header {
       font-size: 15px;
       font-weight: 300;
       color: #202020;
+    }
+  }
+}
+
+.section_descr {
+  font-size: 17px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #222222;
+  margin-top: 19px;
+}
+
+.mobile {
+  background: url('../img/bg_mobile.jpg') center center / cover no-repeat;
+  padding: 48px 0 80px 0;
+  text-align: center;
+  .container {
+    .wrapper_cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 19px 67px;
+      margin-top: 32px;
+    }
+
+    .card {
+      width: 320px;
+      height: 280px;
+      position: relative;
+      &_1 {
+        background: url('../img/mobile_1.png') center center / cover no-repeat;
+      }
+      &_2 {
+        background: url('../img/mobile_2.png') center center / cover no-repeat;
+      }
+      &_3 {
+        background: url('../img/mobile_3.png') center center / cover no-repeat;
+      }
+      &_4 {
+        background: url('../img/mobile_4.png') center center / cover no-repeat;
+      }
+      &_5 {
+        background: url('../img/mobile_5.png') center center / cover no-repeat;
+      }
+      &_6 {
+        background: url('../img/mobile_6.png') center center / cover no-repeat;
+      }
+    }
+
+    .title_card {
+      font-size: 24px;
+      line-height: 31px;
+      font-weight: 400;
+      text-transform: uppercase;
+      color: #ffffff;
+      margin-top: 91px;
+    }
+    .card_btn {
+      width: 26px;
+      height: 26px;
+      background-color: #000000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 100%;
+      cursor: pointer;
+      margin: 0 auto;
+      margin-top: 75px;
+      position: absolute;
+      bottom: 35px;
+      left: calc(50% - 13px);
+    }
+
+    .img_btn {
+      width: 14px;
+      height: 14px;
     }
   }
 }

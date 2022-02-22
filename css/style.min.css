@@ -141,6 +141,11 @@ header .menu_element:not(.start) {
   margin-left: 30px;
 }
 
+.promo .subheader_wrapper .contact .contact_btn:hover {
+  background-color: #1eacc7;
+  background-image: none;
+}
+
 .promo_header {
   font-size: 60px;
   font-weight: 900;
@@ -188,11 +193,14 @@ header .menu_element:not(.start) {
   margin-top: 115px;
 }
 
-.reasons {
-  padding: 79px 0 68px 0;
+.promo_btn:hover {
+  background-color: #1eacc7;
+  background-image: none;
 }
 
-.reasons .container .label {
+.label {
+  background-color: #000000;
+  color: #ffffff;
   font-size: 11px;
   font-weight: 100;
   text-transform: uppercase;
@@ -201,24 +209,26 @@ header .menu_element:not(.start) {
   padding: 5px 12px;
   text-align: center;
   margin: 0 auto;
-  background-color: #000000;
-  color: #ffffff;
 }
 
-.reasons .container .title {
+.title {
+  color: #222222;
+  margin-top: 44px;
   font-size: 38px;
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
-  color: #222222;
-  margin-top: 44px;
+}
+
+.reasons {
+  padding: 79px 0 68px 0;
 }
 
 .reasons .container .reasons_wrapper {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
   gap: 35px 102px;
   margin-top: 40px;
 }
@@ -272,5 +282,94 @@ header .menu_element:not(.start) {
   font-size: 15px;
   font-weight: 300;
   color: #202020;
+}
+
+.section_descr {
+  font-size: 17px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #222222;
+  margin-top: 19px;
+}
+
+.mobile {
+  background: url("../img/bg_mobile.jpg") center center/cover no-repeat;
+  padding: 48px 0 80px 0;
+  text-align: center;
+}
+
+.mobile .container .wrapper_cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  gap: 19px 67px;
+  margin-top: 32px;
+}
+
+.mobile .container .card {
+  width: 320px;
+  height: 280px;
+  position: relative;
+}
+
+.mobile .container .card_1 {
+  background: url("../img/mobile_1.png") center center/cover no-repeat;
+}
+
+.mobile .container .card_2 {
+  background: url("../img/mobile_2.png") center center/cover no-repeat;
+}
+
+.mobile .container .card_3 {
+  background: url("../img/mobile_3.png") center center/cover no-repeat;
+}
+
+.mobile .container .card_4 {
+  background: url("../img/mobile_4.png") center center/cover no-repeat;
+}
+
+.mobile .container .card_5 {
+  background: url("../img/mobile_5.png") center center/cover no-repeat;
+}
+
+.mobile .container .card_6 {
+  background: url("../img/mobile_6.png") center center/cover no-repeat;
+}
+
+.mobile .container .title_card {
+  font-size: 24px;
+  line-height: 31px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-top: 91px;
+}
+
+.mobile .container .card_btn {
+  width: 26px;
+  height: 26px;
+  background-color: #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 100%;
+  cursor: pointer;
+  margin: 0 auto;
+  margin-top: 75px;
+  position: absolute;
+  bottom: 35px;
+  left: calc(50% - 13px);
+}
+
+.mobile .container .img_btn {
+  width: 14px;
+  height: 14px;
 }
 /*# sourceMappingURL=style.min.css.map */
