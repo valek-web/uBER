@@ -484,4 +484,70 @@ header .menu_element:not(.start) {
   font-size: 12px;
   text-transform: uppercase;
 }
+
+.terms {
+  padding: 68px 0 84px 0;
+}
+
+.terms_wrapper_lists {
+  margin-top: 33px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 62px 105px;
+}
+
+.terms_wrapper_lists .terms_list ul {
+  list-style: none;
+  line-height: 24px;
+  padding: 20px;
+}
+
+.terms_wrapper_lists .terms_list ul .list_element {
+  padding: 5px;
+}
+
+.terms_wrapper_lists .terms_list ul .list_element::before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  width: 21px;
+  height: 20px;
+  background-image: url("../img/list_img.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 5px;
+}
+
+.terms_wrapper_lists .terms_list .list_title {
+  font-size: 22px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #1ca8c3;
+}
+
+.terms_wrapper_lists .terms_list .list_descr {
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 24px;
+  font-weight: 400;
+  color: #1ca8c3;
+}
+
+.terms_wrapper_lists .red .list_title {
+  color: #ff5656;
+}
+
+.terms_wrapper_lists .red ul .list_element::before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  width: 21px;
+  height: 20px;
+  background-image: url("../img/list_img_red.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 5px;
+}
 /*# sourceMappingURL=style.min.css.map */
