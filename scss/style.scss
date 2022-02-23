@@ -462,3 +462,35 @@ header {
     }
   }
 }
+
+.peace {
+  padding: 49px 0;
+  background: #080810 url('../img/bg_peace.png') center center / auto no-repeat;
+  min-height: 717px;
+  text-align: center;
+  position: relative;
+  .container {
+    .label {
+      background-color: #ffffff;
+      color: #070716;
+    }
+    .title {
+      color: #ffffff;
+    }
+    .section_descr {
+      color: #ffffff;
+    }
+  }
+  .city {
+    text-align: center;
+    margin-top: 486px;
+    a {
+      font-size: 15px;
+      line-height: 68px;
+      font-weight: 400;
+      text-transform: uppercase;
+      color: #1fbad6;
+      text-decoration: none;
+    }
+  }
+}
