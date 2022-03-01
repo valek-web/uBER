@@ -638,6 +638,10 @@ footer .element {
   margin-right: 9px;
 }
 
+footer .element a i {
+  color: #ffffff;
+}
+
 footer .header_menu {
   max-width: 400px;
   display: -webkit-box;

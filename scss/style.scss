@@ -526,6 +526,11 @@ footer {
     background-color: #070716;
     border-radius: 100%;
     margin-right: 9px;
+    a {
+      i {
+        color: #ffffff;
+      }
+    }
   }
   .header_menu {
     max-width: 400px;
