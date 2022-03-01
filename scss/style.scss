@@ -494,3 +494,81 @@ header {
     }
   }
 }
+
+footer {
+  min-height: 156px;
+  padding: 14px 0 39px 0;
+  text-align: center;
+  &::before {
+    content: '';
+    display: block;
+    width: 299px;
+    height: 4px;
+    background-color: #1fbad6;
+    margin: 0 auto;
+  }
+  .footer_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    margin-top: 34px;
+  }
+  .social_network {
+    display: flex;
+    justify-content: center;
+  }
+  .element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    background-color: #070716;
+    border-radius: 100%;
+    margin-right: 9px;
+  }
+  .header_menu {
+    max-width: 400px;
+    display: flex;
+    margin: 0 auto;
+    list-style-type: none;
+    justify-content: space-around;
+  }
+  .element_menu_footer {
+    a {
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 300;
+      text-transform: uppercase;
+      color: #070716;
+    }
+  }
+  .subheader_menu {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    margin-top: 16px;
+    .element_subheader {
+      a {
+        font-size: 11px;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: #999999;
+        text-decoration: none;
+      }
+    }
+  }
+  .laun_btn {
+    margin-top: 19px;
+    a {
+      font-size: 11px;
+      font-weight: 400;
+      text-transform: uppercase;
+      color: #1fbad6;
+      text-decoration: none;
+    }
+  }
+  .download_footer {
+    padding: 17px;
+  }
+}
