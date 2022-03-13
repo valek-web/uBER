@@ -6,6 +6,13 @@
 header {
   background-color: #212121;
   width: 100%;
+  nav {
+    min-height: 40px;
+    position: relative;
+    .hamburger {
+      display: none;
+    }
+  }
   .header_menu {
     list-style-type: none;
     display: grid;
@@ -13,6 +20,7 @@ header {
     width: 100%;
     padding: 13px 70px;
   }
+
   .menu_element {
     text-align: center;
     a {
@@ -31,7 +39,7 @@ header {
 .promo {
   position: relative;
   background: url('../img/bg_banner.jpg') center center / cover no-repeat;
-  height: 748px;
+  min-height: 748px;
   padding: 151px 0 132px 0;
   text-align: center;
   .subheader {
@@ -72,7 +80,7 @@ header {
       }
       .contact {
         display: flex;
-        justify-items: center;
+        align-items: center;
         address {
           .address {
             font-family: 'Roboto';
