@@ -988,14 +988,22 @@ footer .download_footer {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
+  .reasons .container .wrapper_reasons_text {
+    max-width: 320px;
+  }
   .reasons .container .reasons_text {
     font-size: 15px;
+    max-width: 320px;
   }
   .title {
     font-size: 20px;
   }
   .mobile {
     padding: 32px 0 43px 0;
+  }
+  .mobile .container .card {
+    width: 100%;
+    margin: 0 auto;
   }
   .mobile .container .wrapper_cards {
     -ms-grid-columns: 1fr;
@@ -1006,7 +1014,7 @@ footer .download_footer {
     min-height: 560px;
   }
   .car .bottom_block .car_img {
-    width: 98%;
+    width: 320px;
     height: 160px;
   }
   .car .bottom_block {

@@ -300,8 +300,12 @@
       .reasons_wrapper {
         grid-template-columns: 1fr;
       }
+      .wrapper_reasons_text {
+        max-width: 320px;
+      }
       .reasons_text {
         font-size: 15px;
+        max-width: 320px;
       }
     }
   }
@@ -313,6 +317,10 @@
   .mobile {
     padding: 32px 0 43px 0;
     .container {
+      .card {
+        width: 100%;
+        margin: 0 auto;
+      }
       .wrapper_cards {
         grid-template-columns: 1fr;
       }
@@ -323,7 +331,7 @@
     min-height: 560px;
     .bottom_block {
       .car_img {
-        width: 98%;
+        width: 320px;
         height: 160px;
       }
     }
