@@ -257,8 +257,10 @@
 
 @media screen and (max-width: 576px) {
   header {
-    .header_menu {
-      width: 85%;
+    nav {
+      .header_menu {
+        width: 85%;
+      }
     }
   }
 
@@ -389,6 +391,12 @@
   footer {
     .subheader_menu {
       flex-wrap: wrap;
+      .element_subheader {
+        margin: 7px;
+      }
+    }
+    &::before {
+      width: 80%;
     }
   }
 }

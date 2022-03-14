@@ -180,7 +180,7 @@ header {
     .wrapper_img {
       width: 113px;
       height: 113px;
-      background-color: #1eacc7;
+      background-color: $turquoise;
       border-radius: 100%;
       display: flex;
       justify-content: center;
@@ -199,7 +199,7 @@ header {
     .reasons_header {
       font-size: 17px;
       font-weight: 400;
-      color: #1eacc7;
+      color: $turquoise;
     }
 
     .reasons_text {
@@ -284,7 +284,7 @@ header {
         display: block;
         width: 14px;
         height: 2px;
-        background-color: #1eacc7;
+        background-color: $turquoise;
         transition: 0.3s all;
       }
       &::before {
@@ -293,7 +293,7 @@ header {
         display: block;
         width: 2px;
         height: 14px;
-        background-color: #1eacc7;
+        background-color: $turquoise;
         left: 50%;
         transform: translateX(-50%);
         transition: 0.3s all;
@@ -362,7 +362,7 @@ header {
       display: block;
       width: 583px;
       height: 267px;
-      background-color: #1eacc7;
+      background-color: $turquoise;
       border-radius: 50% 50% 0 0 / 100% 100% 0 0;
       top: 0;
       left: 50%;
