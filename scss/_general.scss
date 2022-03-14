@@ -39,7 +39,6 @@ header {
 .promo {
   position: relative;
   background: url('../img/bg_banner.jpg') center center / cover no-repeat;
-  min-height: 748px;
   padding: 151px 0 132px 0;
   text-align: center;
   .subheader {
@@ -52,6 +51,7 @@ header {
     &_wrapper {
       display: flex;
       justify-content: space-around;
+      align-items: center;
       .wrapper_logo {
         .logo {
           display: flex;
@@ -213,6 +213,7 @@ header {
 }
 
 .section_descr {
+  display: inline-block;
   font-size: 17px;
   line-height: 21px;
   font-weight: 400;
@@ -340,7 +341,7 @@ header {
     justify-content: center;
     align-items: center;
     background: url(../img/bg_car.png);
-    z-index: 2;
+    z-index: 1;
     &_text {
       font-size: 17px;
       line-height: 24px;
@@ -354,7 +355,7 @@ header {
       top: 0;
       left: 50%;
       transform: translate(-50%, -50%);
-      z-index: 3;
+      z-index: 2;
     }
     .semicircle {
       position: absolute;
@@ -558,4 +559,8 @@ footer {
   .download_footer {
     padding: 17px;
   }
+}
+
+.bg_for_menu {
+  display: none;
 }

@@ -54,7 +54,6 @@ header .menu_element:not(.start) {
 .promo {
   position: relative;
   background: url("../img/bg_banner.jpg") center center/cover no-repeat;
-  min-height: 748px;
   padding: 151px 0 132px 0;
   text-align: center;
 }
@@ -74,6 +73,9 @@ header .menu_element:not(.start) {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .promo .subheader_wrapper .wrapper_logo .logo {
@@ -294,6 +296,7 @@ header .menu_element:not(.start) {
 }
 
 .section_descr {
+  display: inline-block;
   font-size: 17px;
   line-height: 21px;
   font-weight: 400;
@@ -448,7 +451,7 @@ header .menu_element:not(.start) {
       -ms-flex-align: center;
           align-items: center;
   background: url(../img/bg_car.png);
-  z-index: 2;
+  z-index: 1;
 }
 
 .car .bottom_block_text {
@@ -466,7 +469,7 @@ header .menu_element:not(.start) {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  z-index: 3;
+  z-index: 2;
 }
 
 .car .bottom_block .semicircle {
@@ -706,6 +709,10 @@ footer .download_footer {
   padding: 17px;
 }
 
+.bg_for_menu {
+  display: none;
+}
+
 @media screen and (max-width: 1150px) {
   .container {
     padding: 0 20px 0 20px;
@@ -839,6 +846,9 @@ footer .download_footer {
   .promo .subheader_wrapper .contact address .address {
     font-size: 18px;
   }
+  .promo {
+    margin-top: 40px;
+  }
   header .header_menu {
     -ms-grid-columns: 60px 4fr 4fr 3fr 3fr 100px;
         grid-template-columns: 60px 4fr 4fr 3fr 3fr 100px;
@@ -850,6 +860,12 @@ footer .download_footer {
   }
   .car .bottom_block .semicircle {
     width: 100%;
+  }
+  header {
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    height: 40px;
   }
   header .header_menu {
     position: fixed;
@@ -863,17 +879,17 @@ footer .download_footer {
     height: 100vh;
     padding: 30% 15px;
     background-color: rgba(0, 0, 0, 0.8);
-    z-index: 3;
+    z-index: 5;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-transition: 0.7 all;
-    transition: 0.7 all;
+    -webkit-transition: 0.7s all;
+    transition: 0.7s all;
   }
   header .header_menu .menu_element a {
     font-size: 20px;
   }
-  .active {
+  header .active {
     left: 0;
   }
   header nav .hamburger {
@@ -881,10 +897,11 @@ footer .download_footer {
     position: absolute;
     right: 10px;
     top: 50%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
+    -webkit-transform: translateY(-40%);
+            transform: translateY(-40%);
     width: 25px;
     height: 25px;
+    z-index: 5;
   }
   header nav .hamburger .element_burger {
     display: block;
@@ -894,31 +911,141 @@ footer .download_footer {
     -webkit-transition: 0.5s all;
     transition: 0.5s all;
   }
-  .hamburger_active .element_burger {
-    margin-bottom: -2px;
+  header nav .hamburger_active .element_burger {
+    margin-bottom: -4px;
   }
-  .hamburger_active .element_burger:nth-child(1) {
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
+  header nav .hamburger_active .element_burger:nth-child(1) {
+    -webkit-transform: translateY(7px) rotate(-45deg);
+            transform: translateY(7px) rotate(-45deg);
   }
-  .hamburger_active .element_burger:nth-child(2) {
+  header nav .hamburger_active .element_burger:nth-child(2) {
     display: none;
   }
-  .hamburger_active .element_burger:nth-child(3) {
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
+  header nav .hamburger_active .element_burger:nth-child(3) {
+    -webkit-transform: translateY(7px) rotate(45deg);
+            transform: translateY(7px) rotate(45deg);
+  }
+  .active_bg {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.705);
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    z-index: 4;
   }
 }
 
 @media screen and (max-width: 576px) {
   header .header_menu {
-    width: 50%;
+    width: 85%;
   }
-  header .header_menu .menu_element a {
+  .promo {
+    padding: 151px 0 32px 0;
+  }
+  .promo .subheader_wrapper .wrapper_logo .logo_text {
+    font-size: 14px;
+  }
+  .promo .subheader_wrapper .wrapper_logo .logo_img {
+    width: 18px;
+    height: 18px;
+  }
+  .promo .subheader_wrapper .wrapper_logo .subheader_text {
+    display: none;
+  }
+  .promo .subheader_wrapper .contact {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .promo .subheader_wrapper .contact address .contact_text {
+    display: none;
+  }
+  .promo .subheader_wrapper .contact address .address {
+    font-size: 12px;
+  }
+  .promo .subheader_wrapper .contact .contact_btn {
+    width: 126px;
+    height: 35px;
+    font-size: 10px;
+    margin-top: 5px;
+  }
+  .promo_descr {
+    display: none;
+  }
+  .promo_header {
+    font-size: 30px;
+  }
+  .promo_subheader {
     font-size: 20px;
   }
-  header .menu_element:not(.start) {
-    border-left: none;
+  .reasons {
+    padding: 32px 0 50px 0;
+  }
+  .reasons .container .reasons_wrapper {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .reasons .container .reasons_text {
+    font-size: 15px;
+  }
+  .title {
+    font-size: 20px;
+  }
+  .mobile {
+    padding: 32px 0 43px 0;
+  }
+  .mobile .container .wrapper_cards {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .car {
+    padding: 25px 0 0 0;
+    min-height: 560px;
+  }
+  .car .bottom_block .car_img {
+    width: 98%;
+    height: 160px;
+  }
+  .car .bottom_block {
+    height: 180px;
+  }
+  .car .bottom_block .semicircle {
+    height: 180px;
+  }
+  .terms {
+    padding: 25px 0 25px 0;
+  }
+  .terms .terms_wrapper_lists {
+    grid-gap: 40px 15px;
+  }
+  .terms .terms_wrapper_lists .terms_list .list_title {
+    font-size: 16px;
+  }
+  .terms .terms_wrapper_lists .terms_list ul {
+    padding: 0;
+  }
+  .terms .terms_wrapper_lists .terms_list ul .list_element {
+    font-size: 14px;
+    line-height: 1.2;
+  }
+  .section_descr {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  .peace {
+    padding: 30px 0;
+    min-height: 320px;
+    max-height: 480px;
+  }
+  .peace .city {
+    margin-top: 200px;
+  }
+  footer .subheader_menu {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 /*# sourceMappingURL=style.min.css.map */

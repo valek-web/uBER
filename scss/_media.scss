@@ -157,6 +157,9 @@
   .promo .subheader_wrapper .contact address .address {
     font-size: 18px;
   }
+  .promo {
+    margin-top: 40px;
+  }
   header .header_menu {
     grid-template-columns: 60px 4fr 4fr 3fr 3fr 100px;
   }
@@ -169,6 +172,12 @@
   .car .bottom_block .semicircle {
     width: 100%;
   }
+  header {
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    height: 40px;
+  }
   header .header_menu {
     position: fixed;
     grid-template-columns: 1fr;
@@ -179,14 +188,14 @@
     height: 100vh;
     padding: 30% 15px;
     background-color: rgba(0, 0, 0, 0.8);
-    z-index: 3;
+    z-index: 5;
     align-items: center;
-    transition: 0.7 all;
+    transition: 0.7s all;
     .menu_element a {
       font-size: 20px;
     }
   }
-  .active {
+  header .active {
     left: 0;
   }
 
@@ -195,9 +204,10 @@
     position: absolute;
     right: 10px;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-40%);
     width: 25px;
     height: 25px;
+    z-index: 5;
     .element_burger {
       display: block;
       background-color: #fff;
@@ -207,30 +217,158 @@
     }
   }
 
-  .hamburger_active {
+  header nav .hamburger_active {
     .element_burger {
-      margin-bottom: -2px;
+      margin-bottom: -4px;
       &:nth-child(1) {
-        transform: rotate(-45deg);
+        transform: translateY(7px) rotate(-45deg);
       }
       &:nth-child(2) {
         display: none;
       }
       &:nth-child(3) {
-        transform: rotate(45deg);
+        transform: translateY(7px) rotate(45deg);
       }
     }
   }
+
+  .active_bg {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.705);
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    z-index: 4;
+  }
 }
 @media screen and (max-width: 576px) {
-  header .header_menu {
-    width: 50%;
-    .menu_element a {
-      font-size: 20px;
+  header {
+    .header_menu {
+      width: 85%;
     }
   }
 
-  header .menu_element:not(.start) {
-    border-left: none;
+  .promo {
+    padding: 151px 0 32px 0;
+    .subheader_wrapper {
+      .wrapper_logo {
+        .logo_text {
+          font-size: 14px;
+        }
+        .logo_img {
+          width: 18px;
+          height: 18px;
+        }
+        .subheader_text {
+          display: none;
+        }
+      }
+      .contact {
+        flex-direction: column;
+        address {
+          .contact_text {
+            display: none;
+          }
+          .address {
+            font-size: 12px;
+          }
+        }
+        .contact_btn {
+          width: 126px;
+          height: 35px;
+          font-size: 10px;
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+  .promo_descr {
+    display: none;
+  }
+  .promo_header {
+    font-size: 30px;
+  }
+  .promo_subheader {
+    font-size: 20px;
+  }
+
+  .reasons {
+    padding: 32px 0 50px 0;
+    .container {
+      .reasons_wrapper {
+        grid-template-columns: 1fr;
+      }
+      .reasons_text {
+        font-size: 15px;
+      }
+    }
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .mobile {
+    padding: 32px 0 43px 0;
+    .container {
+      .wrapper_cards {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+  .car {
+    padding: 25px 0 0 0;
+    min-height: 560px;
+    .bottom_block {
+      .car_img {
+        width: 98%;
+        height: 160px;
+      }
+    }
+    .bottom_block {
+      height: 180px;
+      .semicircle {
+        height: 180px;
+      }
+    }
+  }
+  .terms {
+    padding: 25px 0 25px 0;
+    .terms_wrapper_lists {
+      grid-gap: 40px 15px;
+      .terms_list {
+        .list_title {
+          font-size: 16px;
+        }
+        ul {
+          padding: 0;
+          .list_element {
+            font-size: 14px;
+            line-height: 1.2;
+          }
+        }
+      }
+    }
+  }
+  .section_descr {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  .peace {
+    padding: 30px 0;
+    min-height: 320px;
+    max-height: 480px;
+    .city {
+      margin-top: 200px;
+    }
+  }
+
+  footer {
+    .subheader_menu {
+      flex-wrap: wrap;
+    }
   }
 }
