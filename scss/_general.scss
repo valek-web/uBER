@@ -29,6 +29,9 @@ header {
       font-weight: 300;
       color: #ffffff;
       text-decoration: none;
+      &:hover {
+        color: $turquoise;
+      }
     }
   }
   .menu_element:not(.start) {
